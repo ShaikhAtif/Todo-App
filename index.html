@@ -4,28 +4,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <title>Stop Watch</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
+
+    <!-- <script src="app.js"></script> -->
 </head>
+<style>
+    html {
+        height: 100%
+    }
 
-<body background="stopwatch.jpg" style="width: 100%;">
-    <center style="margin-top: 200px;">
-        <div>
+    body {
+        height: 100%;
+        text-align: center;
+        background-image: linear-gradient(to top, #577a83, #269d9a, #15be8f, #6fd965, #cfeb12);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
-<br>
-<br>
-<br>
-            <h1 id="timer">0 : 0 : 0</h1>
-    
-<br>        <button id="begin" onclick="begin();">begin</button>
-            <button id="stop" onclick="stop();">Stop</button>
-            <button id="reset" onclick="reset();">Reset</button><br>
-            <h4 id="heading">ATIFWATCH</h4>
+    ul {
+        list-style-type: none;
+    }
 
+    .impact {
+        font-family: Impact, Charcoal, sans-serif;
+        color: whitesmoke;
+    }
+
+    .green {
+        background-color: tomato;
+    }
+
+    .edit-icon {
+        color: #3CC3EA;
+        font-size: 25px;
+        margin-right: 15px;
+    }
+
+    .trash-icon:hover,.del-icon:hover,.edit-icon:hover,.plus-icon:hover,.check-icon:hover {
+        cursor: pointer;
+    }
+
+    .del-icon {
+        color: red;
+        font-size: 25px;
+    }
+
+    .check-icon {
+        color: #81D0B1;
+        font-size: 25px;
+        margin-left: 15px;
+    }
+
+    .plus-icon {
+        font-size: 30px;
+        color: #1CCCAA;
+        margin: 0px 20px 0px 50px;
+    }
+
+    .trash-icon {
+        font-size: 30px;
+        color: gray
+    }
+
+    .border-bottom {
+        margin: auto;
+    }
+
+    .hidden {
+        display: none;
+    }
+    .main{
+        width: auto;
+        margin:auto
+    }
+</style>
+
+<body>
+    <br>
+    <br>
+    <br>
+    <div class="main">
+        <h1 class="text-align-center impact">TODO-APP</h1>
+        <div class="container py-4" style="background-color: white;border-radius: 10px;">
+            <div style="display: inline;">
+                <input class="col-4" type="text" id="todo-item" style="padding-top: 7px;">
+                <i class="fad fa-plus plus-icon" onclick="todoadd()"></i>
+                <i class="fad fa-trash-alt trash-icon" onclick="delall()"></i>
+
+            </div>
         </div>
-    </center>
+        <br>
+        <div>
+            <div class="container py-4" style="background-color: white;border-radius: 10px;">
+                <ul id="list">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
 </body>
-<script src="app.js"></script>
 
 </html>
